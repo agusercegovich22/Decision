@@ -1,0 +1,22 @@
+/*5. Se lee un número de cinco cifras correspondiente
+ a un boleto de colectivo. Verificar si es o no capicúa.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int boleto;
+    printf("Ingresar el numero de su boleto: ");
+    scanf("%d", &boleto);
+    if(boleto/10000 == boleto%10)
+        if((boleto/1000)%10 == (boleto%100)/10)
+            printf("El boleto %d es un numero capicua", boleto);
+        else
+            printf("El boleto %d no es un numero capicua", boleto);
+    else
+        printf("El boleto %d no es un numero capicua", boleto);
+    printf("\n");
+    system("pause");
+    return 0;
+}
