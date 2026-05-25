@@ -1,0 +1,39 @@
+/*Dados tres números enteros, determinar cuál es el mayor siempre y cuando sean distintos. Caso contrario
+mostrar cuantos números están repetidos.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n1, n2, n3;
+    printf("Ingresar el primer numero entero: ");
+    scanf("%d", &n1);
+    printf("Ingresar el segundo numero entero: ");
+    scanf("%d", &n2);
+    printf("Ingresar el tercer numero entero: ");
+    scanf("%d", &n3);
+    if(n1!=n2 && n1!=n3 && n2!=n3)
+        if(n1>n2 && n1>n3)
+            printf("%d el primer numero ingresado, es el mayor", n1);
+        else
+            if(n2>n3)
+                printf("%d el segundo numero ingresado, es el mayor", n2);
+            else
+                printf("%d el tercer numero ingresado, es el mayor", n3);
+    else
+        if(n1==n2)
+            if(n1==n3)
+                printf("Los tres numeros ingresados son iguales");
+            else
+                printf("El primer numero: %d, y el segundo: %d, son iguales", n1, n2);
+        else
+            if(n1==n3)
+                printf("El primer numero: %d, y el tercero: %d, son iguales", n1, n3);
+            else
+                if(n2==3)
+                    printf("El segundo numero: %d, y el tercero: %d, son iguales", n2, n3);
+    printf("\n");
+    system("pause");
+    return 0;
+}
