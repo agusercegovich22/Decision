@@ -13,7 +13,9 @@ int main(){
     scanf("%d", &n2);
     printf("Ingresar el tercer numero entero: ");
     scanf("%d", &n3);
-    if(n1!=n2 && n1!=n3 && n2!=n3)
+    //Puedo poner los ifs sin llaves porque en cada if solo estoy usando una línea
+    //y el if que abarca dentro de si mismo una estrcutura if_else toma al bloque como una sola linea
+    if(n1!=n2 && n1!=n3 && n2!=n3) 
         if(n1>n2 && n1>n3)
             printf("%d el primer numero ingresado, es el mayor", n1);
         else
