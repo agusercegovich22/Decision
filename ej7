@@ -1,0 +1,30 @@
+/*7. Realizar un programa en cual se ingresen los 3 lados de un triángulo e indique si el mismo es equilátero,
+escaleno o isósceles. El tipo de triangulo debe mostrarse solo en caso de que con los lados ingresados se
+forme un triángulo (para que sea triángulo la suma de dos de sus lados siempre es mayor que el tercer lado.
+Esto debe cumplirse para todos los lados)*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    float l1, l2, l3;
+    printf("Ingresar el primer lado: ");
+    scanf("%f", &l1);
+    printf("Ingresar el segundo lado: ");
+    scanf("%f", &l2);
+    printf("Ingresar el tercer lado: ");
+    scanf("%f", &l3);
+    if(l1+l2>l3 && l1+l3>l2 && l2+l3>l1)
+        if(l1==l3 && l1==l2)
+            printf("El triangulo es equilatero");
+        else
+            if(l1==l2 || l1==l3 || l2==l3)
+                printf("El triangulo es isoceles");
+            else
+                printf("El triangulo es escaleno");
+    else
+        printf("No se puede formar el triangulo ya que no se cumple la condición: la suma de dos de sus lados siempre es mayor que el lado restante");
+    printf("\n");
+    system("pause");
+    return 0;
+}
