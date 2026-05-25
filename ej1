@@ -1,0 +1,19 @@
+/*Ingresar dos números a y b y si a>b calcular e informar a - b, en caso contrario a + b*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    float a, b;
+    printf("Ingresar el primer numero: ");
+    scanf("%f", &a);
+    printf("Ingresar el segundo numero: ");
+    scanf("%f", &b);
+    if(a>b)
+        printf("a es mayor que b, resta a-b = %.3f", a-b);
+    else
+        printf("a es menor que b, suma a+b = %.3f", a+b);
+    printf("\n");
+    system("pause");
+    return 0;
+}
