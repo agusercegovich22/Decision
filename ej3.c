@@ -1,17 +1,22 @@
-/*Ingresar un car·cter e indicar si es o no una vocal,
- debe considerarse tanto may˙sculas como min˙sculas.
+/*Ingresar un car√°cter e indicar si es o no una vocal,
+ debe considerarse tanto may√∫sculas como min√∫sculas.
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h> //Para toupper pasa a may√∫scula, tolower pasa a min√∫sculas
 
 int main(){
-    char letra;
+    char letra, letraM;
     printf("Ingresar un caracter ");
     scanf("%c", &letra);
-    letra = toupper(letra);
-    if(letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U')
+    letraM = toupper(letra);
+    if(letraM == 'A' || letraM == 'E' || letraM == 'I' || letraM == 'O' || letraM == 'U')
         printf("El caracter %c es una vocal", letra);
     else
         printf("El caracter %c no es una vocal: ", letra);
+    printf("\n");
+    system("pause");
     return 0;
 }
+
