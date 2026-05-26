@@ -6,7 +6,7 @@ números enteros ingresados por teclado. (Usar la sentencia switch para armar el
 #include <ctype.h>
 int main(){
     char operacion;
-    int n1, n2;
+    int n1, n2, error=0;
     float res;
     printf("Ingresar el primer numero: ");
     scanf("%d", &n1);
@@ -34,11 +34,12 @@ int main(){
             break;
         case'C':
         case'D':
-            if(n2==0)
+            if(n2==0){
                 printf("No se puede dividir por 0");
                 res = 0;
+            }
             else
-                res = (float)n1/n2);//Cast:(tipo)variable=(float)n1, guarda en la memoria el valor de n1 pero en formato tipo float 
+                res = (float)n1/n2;//Cast:(tipo)variable=(float)n1, guarda en la memoria el valor de n1 pero en formato tipo float
             break;
         default:
             error = 1;
