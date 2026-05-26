@@ -1,0 +1,51 @@
+/*8. Ingresar tres letras minúsculas por teclado y mostrarlas en pantalla ordenadas alfabéticamente.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    char l1, l2, l3;
+    printf("Ingresar la primer letra minuscula: ");
+    scanf("%c", &l1);
+    getchar();
+    printf("Ingresar la segunda letra minuscula: ");
+    scanf("%c", &l2);
+    getchar();
+    printf("Ingresar la tercer letra minuscula: ");
+    scanf("%c", &l3);
+    if(l1>l2 && l1>l3){
+        if(l2>l3){
+            printf("1er caso\n");
+            printf("%c,%c,%c", l3, l2, l1);
+        }
+        else{
+            printf("2do caso\n");
+            printf("%c,%c,%c", l2, l3, l1);
+        }
+    }
+    else{
+        if(l2>l1 && l2>l3)
+            if(l1>l3){
+                printf("3er caso\n");
+                printf("%c,%c,%c", l3, l1, l2);
+            }
+            else{
+                printf("4to caso\n");
+                printf("%c,%c,%c", l1, l3, l2);
+            }
+        else
+            if(l1>l2){
+                printf("5to caso\n");
+                printf("%c,%c,%c", l2, l1, l3);
+            }
+            else{
+                printf("6to caso\n");
+                printf("%c,%c,%c", l1, l2, l3);
+            }
+    }
+
+
+    printf("\n");
+    system("pause");
+    return 0;
+}
