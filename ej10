@@ -1,0 +1,33 @@
+/*10. Leer una fecha representada por dos enteros, mes y año, y dar como resultado los días que tiene el mes,
+teniendo en cuenta los años bisiestos. Un año es bisiesto cuando es múltiplo de 4 y no de 100, o cuando es
+múltiplo de 400.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int anio, mes;
+    printf("Ingresar anio: ");
+    scanf("%d", &anio);
+    printf("Ingresar mes: ");
+    scanf("%d", &mes);
+    if(5%2==0)
+        printf("Holaa");
+    if(((anio%4)==0 && ((anio%100)!=0)|| (anio%400)==0))
+        if(mes==2)
+            printf("El mes tiene 29 dias");
+        else
+            printf("El mes tiene 28 dias");
+    if(mes==1 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12)
+        printf("El mes tiene 31 dias");
+    else
+        if(mes==4 || mes==6 || mes==9 || mes==11)
+            printf("El mes tiene 30 dias");
+        else
+            printf("El mes tiene 29 dias");
+
+    printf("\n");
+    system("pause");
+    return 0;
+}
