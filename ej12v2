@@ -1,0 +1,52 @@
+/*12. Realizar un programa que, por medio de un menú, realice la suma, resta, multiplicación o división de dos
+números enteros ingresados por teclado. (Usar la sentencia switch para armar el menú). */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+int main(){
+    char operacion;
+    int n1, n2;
+    float res;
+    printf("Ingresar el primer numero: ");
+    scanf("%d", &n1);
+    printf("Ingresar el segndo numero: ");
+    scanf("%d", &n2);
+    getchar();
+    printf("Ingresar el caracter que corresponda a la operacion que desee realizar");
+    printf("\nSuma S");
+    printf("\nResta R");
+    printf("\nMultiplicacion P o M");
+    printf("\nDivision C o D");
+    printf("\n");
+    scanf("%c", &operacion);
+    operacion = toupper(operacion);
+    switch(operacion){
+        case'S':
+            res = n1+n2;
+            break;
+        case'R':
+            res= n1-n2;
+            break;
+        case'P':
+        case'M':
+            res = n1*n2;
+            break;
+        case'C':
+        case'D':
+            if(n2==0)
+                printf("No se puede dividir por 0");
+                res = 0;
+            else
+                res = (float)n1/n2);//Cast:(tipo)variable=(float)n1, guarda en la memoria el valor de n1 pero en formato tipo float 
+            break;
+        default:
+            error = 1;
+            printf("Valor invalido");
+    }
+    if(!error)//error==0
+        printf("Resultado de la operacion: %.2f", res);
+    printf("\n");
+    system("pause");
+    return 0;
+}
