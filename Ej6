@@ -1,0 +1,17 @@
+/*6. Un producto se vende de a cajas de 15 unidades. Se ingresa la cantidad de unidades vendidas y se debe
+informar la cantidad de cajas mínimas necesarias para cubrir dicha cantidad.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main(){
+    int unidades;
+    printf("Ingrese la cantidad de unidades vendidas: ");
+    scanf("%d", &unidades);
+    printf("La cantidad de cajas minimas necesarias para cubrir dicha cantidad es: %d", unidades/15);
+    printf("\n");
+    system("pause");
+    return 0;
+}
