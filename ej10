@@ -5,6 +5,7 @@ múltiplo de 400.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 int main(){
     int anio, mes;
@@ -17,7 +18,7 @@ int main(){
         biciesto = true;
     else
         biciesto = false;
-    if(mes==1 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12)
+    if(mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12)
         printf("El mes tiene 31 dias");
     else
         if(mes==4 || mes==6 || mes==9 || mes==11)
