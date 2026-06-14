@@ -1,0 +1,38 @@
+/*11. Se ingresa la altura (en metros)  y peso (en kilogramos) de una persona adulta con dichos datos se debe
+calcular el índice de masa corporal mediante la fórmula:        peso / (estatura2)
+
+Según el valor obtenido de masa corporal se debe mostrar un carácter indicando el estado de la persona:
+
+Delgadez: índice de masa corporal <16
+ Delgadez Moderada: índice de masa corporal mayor o igual a 16 y menor o igual a 18.49
+ Normal: índice de masa corporal mayor a 18,49 menor a 25
+ Sobrepeso: índice de masa corporal mayor o igual a 25 y menor a 30
+ Obesidad: índice de masa corporal mayor o igual a 30
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    float altura, peso, mcorp;
+    printf("Ingrese su altura en metros: ");
+    scanf("%f", &altura);
+    printf("Ingrese su peso en kilogramos: ");
+    scanf("%f", &peso);
+    mcorp = peso/(altura*altura);
+    printf("Masa corporal: %f\n", mcorp);
+    if(mcorp <16)
+        printf("\tD");
+    else if(mcorp >= 16 && mcorp <= 18.49)
+        printf("\tM");
+    else if(mcorp > 18.49 && mcorp < 25)
+        printf("\tN");
+    else if(mcorp >= 25 && mcorp < 30)
+        printf("\tS");
+    else if(mcorp >= 30)
+        printf("\tO");
+    printf("\n");
+    system("pause");
+    return 0;
+}
