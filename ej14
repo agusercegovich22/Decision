@@ -1,0 +1,55 @@
+/*14. Realizar un programa que ingresando el precio de un producto y el medio de pago permita calcular el
+importe final a abonar:
+
+
+ Si el medio de pago es E que equivale a efectivo se le descuenta el 10%
+ Si el medio de pago es D que equivale a tarjeta de débito se le descuenta el 3.5%
+ Si el medio de pago es C que equivale a tarjeta de crédito tiene un incremento del 5%
+ Si el medio de pago es T que equivale a tickets el importe no sufre modificaciones
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    float precio, pfinal;
+    char mpago;
+    int valido = 1;
+    printf("Ingrese el precio del producto a comprar: $");
+    scanf("%f", &precio);
+    printf("Para abonar se le ofrecen las siguientes opciones:\n");
+    printf("Efectivo, 10%% de descuento\t\t\t(E)\n");
+    printf("Tarjeta de debito, 3,5%% de descuento\t\t(D)\n");
+    printf("Tarjeta de credito, incremento del 5%%\t\t(C)\n");
+    printf("Tickets, el importe no sufre modificaciones\t(T)\n");
+    printf("Escriba en minuscula o mayuscula el caracter del medio de pago a utilizar:");
+    getchar();
+    scanf("%c", &mpago);
+    switch(mpago){
+    case 'E':
+    case 'e':
+        pfinal = precio*.9;
+    break;
+    case 'D':
+    case 'd':
+        pfinal = precio*.965;
+    break;
+    case 'C':
+    case 'c':
+        pfinal = precio+precio*.05;
+    break;
+    case 'T':
+    case 't':
+        pfinal = precio;
+    break;
+    default:
+        printf("\nCaracter no reconocido, medio de pago invalido");
+        valido = 0;
+    }
+    if(valido == 1)
+        printf("\nUsted eligio como medio de pago '%c', el importe total a pagar es : $%.2f", mpago, pfinal);
+    printf("\n");
+    system("pause");
+    return 0;
+}
