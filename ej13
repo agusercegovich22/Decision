@@ -1,0 +1,42 @@
+/*13. Calcular x a la n, con n entre 0 y 5, usando la sentencia switch.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    float x, potencia;
+    int n, expo = 1;
+    printf("Ingresar la base de la potencia: ");
+    scanf("%f", &x);
+    printf("Ingresar un exponente entero del 0 al 5 de la potencia: ");
+    scanf("%d", &n);
+    switch(n){
+    case 0:
+        potencia = 1;
+    break;
+    case 1:
+        potencia = x;
+    break;
+    case 2:
+        potencia = x*x;
+    break;
+    case 3:
+        potencia = x*x*x;
+    break;
+    case 4:
+        potencia = x*x*x*x;
+    break;
+    case 5:
+        potencia = x*x*x*x*x;
+    break;
+    default:
+        printf("Valor de exponente invalido, solo numeros enteros de 0 a 5");
+        expo = 0;
+    }
+    if(expo == 1)
+        printf("La potencia de base %.2f y exponente %.1d es igual a : %.4f", x, n, potencia);
+    printf("\n");
+    system("pause");
+    return 0;
+}
